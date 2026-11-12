@@ -1,0 +1,57 @@
+{
+    // ========== 工作区信任 ==========
+
+    // 是否启用信任机制（设 false 则彻底关闭， true 可以调整下面三个配置以控制通知）
+    "security.workspace.trust.enabled": false,
+    // "security.workspace.trust.startupPrompt": "never", // 启动时的信任提示：always | once | never
+    // "security.workspace.trust.untrustedFiles": "open", // 未被信任时怎么处理文件打开：open | newWindow
+    // "security.workspace.trust.banner": "never", // 插件在受限模式下是否仍然运行
+    // =========== 工作区外观 ==============
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.tree.indent": 16,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.wrapTabs": true, // 标签页多行
+    "workbench.editor.labelFormat": "short", // 同名显示父级路径
+    "workbench.editor.enablePreview": false, // 关闭打开标签的预览模式
+    
+    // ========== 编辑器外观 ==========
+    "editor.fontSize": 15,
+    "editor.fontFamily": "'Maple Mono Normal NF CN', 'Cascadia Code', 'Fira Code', 'JetBrains Mono', Consolas, monospace",
+    "editor.fontLigatures": true, // 连字符，让 => 显示为 ⇒
+    "editor.cursorBlinking": "smooth", // 光标平滑闪烁
+    "editor.cursorSmoothCaretAnimation": "on", // 光标平滑滚动
+    "editor.renderWhitespace": "boundary", // 显示空格
+    "editor.bracketPairColorization.enabled": true, // 括号对染色
+    "editor.guides.bracketPairs": true, // 括号对连线
+    "editor.mouseWheelZoom": true, // ctrl + mouse 控制编辑器缩放
+
+    // ========== 编码体验 ==========
+    "editor.tabSize": 8, // 缩进宽度
+    "editor.insertSpaces": true, // 用空格代替 Tab
+    "editor.wordWrap": "off", // 代码不自动换行
+    "editor.minimap.enabled": false, // 关掉小地图（新手建议先关）
+    "editor.renderLineHighlight": "all", // 高亮当前行
+    "editor.suggestSelection": "first", // 补全默认高亮：最近用过的
+    "files.autoSave": "afterDelay", // 自动保存策略(afterDelay必须配合下一个配置)
+    "files.autoSaveDelay": 100, // 100ms后保存
+    "files.eol": "\n",
+
+      // ========== 文件管理 ==========
+    "explorer.confirmDelete": false, // 删除文件前确认
+    "explorer.compactFolders": false, // 文件夹不压缩显示
+    "files.exclude": {}, // 文件树不显示
+
+      // ========== 终端 ==========
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontFamily": "Maple Mono Normal NF CN",
+    "terminal.integrated.mouseWheelScrollSensitivity": 3,
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.initialHint": false,
+    //makefile缩进统一
+    "[makefile]": {
+        "editor.insertSpaces": false,
+        "editor.tabSize": 4
+    }
+}
