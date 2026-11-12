@@ -2,10 +2,8 @@
 
 --contact部分完成
 
---目前进度storage
+--storage部分完成
 
---调整了gitignore
+--ui部分完成
 
---验证多端编辑03
-
--测试05
+--main待完成

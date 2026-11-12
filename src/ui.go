@@ -2,9 +2,14 @@ package main
 
 import (
 	"fmt"
+	"bufio"
+	"os"
+	"strings"
 )
 
-func ui_show_all() {
+var stdin = bufio.NewReader(os.Stdin)
+
+func uiMenu() error {
 	fmt.Println("=============简易通讯录============")
 	fmt.Println("请输入数字选择功能")
 	fmt.Println("1.添加联系人")
@@ -14,4 +19,24 @@ func ui_show_all() {
 	fmt.Println("5.修改联系人信息")
 	fmt.Println("0.保存并退出")
 	fmt.Println("保存后将覆盖原有通讯录！")
+	return nil 
+}
+
+func (b *Book) uiShowAll() error {
+	var count int = 0
+	for _,c := range b.Contacts{
+		fmt.Printf("%s %s\n", c.Name,c.Phone)
+		count++
+	}
+	fmt.Printf("共%d个联系人\n",count)
+	return nil
+}
+
+func uiReadLine(prompt string) string {
+	fmt.Println(prompt)
+	line,err := stdin.ReadString('\n')
+	if(err != nil){
+		return "出错啦"
+	}
+	return strings.TrimSpace(line)
 }
