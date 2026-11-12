@@ -25,10 +25,10 @@ func main() {
 				fmt.Println(err2)
 			}
 			if err2 == nil {
-				fmt.Printf("%s\n%s", c.Name, c.Phone)
+				fmt.Printf("%s %s\n", c.Name, c.Phone)
 			}
 		case "3":
-			err3 := b.Remove(uiReadLine("输入要删除的姓名"))
+			err3 := b.Remove(uiReadLine("输入要删除的姓名:"))
 			if err3 != nil{
 				fmt.Println(err3)
 			}
@@ -36,6 +36,7 @@ func main() {
 				fmt.Println("已删除成功")
 			}
 		case "4":
+			fmt.Println("测试04")
 			b.uiShowAll()
 		case "5":
 			err5 := b.Rename(uiReadLine("输入要修改的姓名："),uiReadLine("新姓名："), uiReadLine("新电话："))

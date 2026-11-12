@@ -30,16 +30,18 @@ func (b *Book) Load() error {
 	defer fp.Close()
 
 	scanner := bufio.NewScanner(fp)
-	parts := strings.Fields(scanner.Text())
-	if len(parts) == 2 {
-		c := &Contact{
-			Name: parts[0],
-			Phone: parts[1],
+	for scanner.Scan(){
+		parts := strings.Fields(scanner.Text())
+		if len(parts) == 2 {
+			c := &Contact{
+				Name: parts[0],
+				Phone: parts[1],
+			}
+			b.Contacts = append(b.Contacts, c)
 		}
-		b.Contacts = append(b.Contacts, c)
-	}
-	if erraa := scanner.Err(); erraa != nil{
-		return erraa
+		if erraa := scanner.Err(); erraa != nil{
+			return erraa
+		}
 	}
 	return nil
 }

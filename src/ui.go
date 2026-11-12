@@ -23,7 +23,6 @@ func uiMenu() error {
 
 	fmt.Println("0.保存并退出")
 	fmt.Printf("\n")
-	fmt.Println("保存后将覆盖原有通讯录！")
 	return nil 
 }
 
