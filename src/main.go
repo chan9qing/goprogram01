@@ -50,6 +50,9 @@ func main() {
 			b.Save()
 			fmt.Println("保存成功，再见！")
 			return
+		default:
+			fmt.Println("无效选择")
 		}
+		
 	}
 }
