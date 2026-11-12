@@ -13,4 +13,5 @@ func ui_show_all() {
 	fmt.Println("4.展示所有联系人")
 	fmt.Println("5.修改联系人信息")
 	fmt.Println("0.保存并退出")
+	fmt.Println("保存后将覆盖原有通讯录！")
 }
