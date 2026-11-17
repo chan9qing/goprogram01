@@ -25,7 +25,7 @@ func main() {
 				fmt.Println(err2)
 			}
 			if err2 == nil {
-				fmt.Printf("%s %s\n", c.Name, c.Phone)
+				fmt.Println(c)
 			}
 		case "3":
 			err3 := b.Remove(uiReadLine("输入要删除的姓名:"))

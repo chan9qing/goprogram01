@@ -14,6 +14,10 @@ type Book struct{
 	Contacts []*Contact
 }
 
+func (c Contact) String() string {
+	return c.Name + " " + c.Phone
+}
+
 func (b *Book) Add (name string, phone string) error{
 	for _,contact := range b.Contacts{
 		if contact.Name == name{
